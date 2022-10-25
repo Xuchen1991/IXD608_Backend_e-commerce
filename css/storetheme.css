@@ -206,3 +206,14 @@ h1 {
 	border: 1px solid var(--color-main-dark);
 	text-align: center;
 }
+
+/* php version */
+.navbar {
+	background-color: transparent;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.nav-stretch .to_vertical_menu:hover{
+	border-bottom: 1px solid transparent;
+}
+/* php version */

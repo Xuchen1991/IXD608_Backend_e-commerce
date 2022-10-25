@@ -57,6 +57,7 @@ a:hover {
 }
 .flex-none {
 	flex: none;
+	margin-right: 440px;
 }
 .flex-align-center {
 	align-items: center;
