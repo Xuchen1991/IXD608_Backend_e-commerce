@@ -10,6 +10,9 @@
 	<? include "parts/meta.php"?>
 </head>
 <body>
+
+	<? include "parts/navbar.php"; ?>
+	
 	<header>
 		<div class="container display-flex">
 			<div class="flex-none">
@@ -29,7 +32,7 @@
 	</header>
 	<div class="container">
 		<div class="card soft">
-			<h2>Grid
+			<h2>Grid</h2>
 				<div class="grid">
 					<div class="col-xs-6">Column 6</div>
 					<div class="col-xs-6">Column 6</div>
@@ -51,10 +54,10 @@
 					<div class="col-xs-2">Column 2</div>
 
 				</div>
-			</h2>
+			</div>
 		</div>
-		
 	</div>
+
 	<div class="container">
 		<div class="card soft">
 			<h2>Responsive Grid</h2>
