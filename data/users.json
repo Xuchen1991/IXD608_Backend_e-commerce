@@ -1,32 +1,34 @@
 [
+
 	{
-		"name":"Kevin Xu",
+		"name":"Sunny Eun",
 		"type":"Student",
-		"email":"xxc1991@gmail.com",
-		"classes":[601,608,618]
+		"email":"sunny.eun@gmail.com",
+		"classes":[601, 608, 618]
 	},
 	{
-		"name":"Jeremy Shi",
-		"type":"Engineer",
-		"email":"jeremy2022@gmail.com",
-		"classes":[601,608,617,618]
+		"name":"Phoebe Buffay",
+		"type":"Singer",
+		"email":"phoebe.buffay@gmail.com",
+		"classes":[601, 608, 617, 618]
 	},
 	{
 		"name":"Monica Geller",
 		"type":"Chef",
-		"email":"mg2022@gmail.com",
-		"classes":[249,250,369]
+		"email":"monica.geller@gmail.com",
+		"classes":[249, 250, 369]
 	},
 	{
 		"name":"Joey Tribbiani",
 		"type":"Actor",
-		"email":"jt2022@gmail.com",
-		"classes":[250,601,608,618]
+		"email":"joey.tribbiani@gmail.com",
+		"classes":[250, 601, 608, 618]
 	},
 	{
 		"name":"Chandler Bing",
 		"type":"Who Knows",
-		"email":"cb2022@gmail.com",
-		"classes":[249,608,617]
+		"email":"chandler.bing@gmail.com",
+		"classes":[249, 608, 617]
 	}
+
 ]
