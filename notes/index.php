@@ -24,8 +24,8 @@
 
 		echo 5+3;
 
-		$firstname = "Sunny";
-		$lastname = "Eun";
+		$firstname = "Xuchen";
+		$lastname = "Xu";
 		$fullname = $firstname.' '.$lastname;
 
 		echo $fullname;

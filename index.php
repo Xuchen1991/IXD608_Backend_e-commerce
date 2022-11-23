@@ -1,8 +1,13 @@
+<?
+	include_once "lib/php/functions.php";
+	// print_p($_SESSION,$_GET,$_POST);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-	<title>Computer accessories store</title>
+	<title>Computer Accessories Store</title>
 	<? include "parts/meta.php"; ?>
 
 </head>
