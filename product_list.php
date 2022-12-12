@@ -27,29 +27,32 @@ include_once "parts/templates.php";
 
 		<div class="form-control">
 			<div class="card soft">
-				<div class="display-flex">
-					<div class="display-flex flex-stretch">
-						<div class="flex-none">
-							<button class="form-button" data-value="" data-filter="category" type="button">All</button>
+				<div class="display-flex flex-wrap">
+					
+					<div class="display-flex">
+						<div class="display-flex flex-stretch">
+							<div class="flex-none">
+								<button class="form-button" data-value="" data-filter="category" type="button">All</button>
+							</div>
+							<div class="flex-none">
+								<button class="form-button" data-value="PC Cleaning" data-filter="category" type="button">PC Cleaning</button>
+							</div>
+							<div class="flex-none">
+								<button class="form-button" data-value="Electronic accessories" data-filter="category" type="button">Electronic accessories</button>
+							</div>
+							<div class="flex-none">
+								<button class="form-button" data-value="Others" data-filter="category" type="button">Others</button>
+							</div>
 						</div>
 						<div class="flex-none">
-							<button class="form-button" data-value="PC Cleaning" data-filter="category" type="button">PC Cleaning</button>
-						</div>
-						<div class="flex-none">
-							<button class="form-button" data-value="Electronic accessories" data-filter="category" type="button">Electronic accessories</button>
-						</div>
-						<div class="flex-none">
-							<button class="form-button" data-value="Others" data-filter="category" type="button">Others</button>
-						</div>
-					</div>
-					<div class="flex-none">
-						<div class="form-select">
-							<select class="js-sort">
-								<option value="1">Newest</option>
-								<option value="2">Oldest</option>
-								<option value="3">Least Expensive</option>
-								<option value="4">Most Expensive</option>
-							</select>
+							<div class="form-select">
+								<select class="js-sort">
+									<option value="1">Newest</option>
+									<option value="2">Oldest</option>
+									<option value="3">Least Expensive</option>
+									<option value="4">Most Expensive</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>

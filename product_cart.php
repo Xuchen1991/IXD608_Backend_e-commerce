@@ -3,6 +3,7 @@
     include_once "parts/templates.php";
 
     $cart_items = getCartItems();
+    $cart = getCart();
 ?>
 
 <!DOCTYPE html>
@@ -15,18 +16,37 @@
     <? include "parts/navbar.php"; ?>
 
     <div class="container">
+        <h2>In Your Cart</h2>
+
+        <?
+        if(count($cart)) {
+            ?>
+
         <div class="grid gap">
-            <div class="col-xs-12 col-md-7">
+            <div class="col-cs-12 col-md-7">
                 <div class="card soft">
-                    <?= array_reduce($cart_items,'cartListTemplate')?>
+                    <?= array_reduce($cart_items,'cartListTemplate') ?>
                 </div>
             </div>
             <div class="col-xs-12 col-md-5">
-                <div class="card soft">
+                <div class="card soft relative">
                     <?= cartTotals() ?>
+
+                    <div class="card-section checkout-button">
+                        <a href="product_checkout.php" class="form_button">Checkout</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <? } else { ?>
+        <div class="card soft">
+            <p>No Items in Cart</p>
+        </div>
+        <h3>Other Recommendations</h3>
+        <? recommendedAnything(3); ?>
+        
+
+        <? } ?>
     </div>
     
 </body>

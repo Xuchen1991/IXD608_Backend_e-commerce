@@ -1,6 +1,6 @@
 <?
     include_once "lib/php/functions.php";
-    //print_p($_SESSION,$_GET,$_POST);
+    include_once "parts/templates.php";
 
 ?>
 
@@ -11,13 +11,20 @@
 	<title>Computer Accessories store</title>
 	<? include "parts/meta.php"; ?>
 </head>
-<body>
+<body class="flush">
 	<? include "parts/navbar.php"?>
+
+    <div class="view-window" style="background-image:url(img/bg.jpg)">
+        <div class="fill-parent display-flex flex-align-center flex-justify-center">
+            <!-- <div class="card soft">
+                Products
+            </div> -->
+        </div>
+    </div>
     <div class="container">
     	<div class="card soft">
     		
             <h2>Home Page</h2>
-            <div class="view-window" style="background-image: url(img/bg.jpg);"></div>
   
             <div class="container">
         <aricle id="article1" class="article">
@@ -56,6 +63,12 @@
     	</div>
     </div>
    
-  
+    <div class="container">
+        <h2>Computer accessories of the week</h2>
+        <? recommendedCategory("accessories") ?>
+        <h2>Cleaning kit of the week</h2>
+        <? recommendedSimilar("cleaning kit",8) ?>
+    </div>
+
 </body>
 </html>

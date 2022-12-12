@@ -1,22 +1,22 @@
 <?
-
 include_once "lib/php/functions.php";
+
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` = ".$_GET['id'])[0];
 
 $images = explode(",",$product->images);
 
 $image_element = array_reduce($images,function($r,$o){
-	return $r."<img src='image/store/$o'>";
+	return $r."<img src='img/$o'>";
 })
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>store Product Item</title>
+	<title>Store Product Item</title>
 	<? include "parts/meta.php"; ?>
-	<script src="js/product_thumbs.js"></script>
 </head>
 <body>
 	<? include "parts/navbar.php"; ?>
@@ -26,7 +26,7 @@ $image_element = array_reduce($images,function($r,$o){
 			<div class="colxs-12 col-md-7">
 				<div class="card soft">
 					<div class="images-main">
-						<img src="image/store/<?= $product->thumbnail ?>" alt="<?= $product->title ?>">
+						<img src="img/<?= $product->thumbnail ?>" alt="<?= $product->title ?>">
 					</div>
 					<div class="images-thumbs">
 						<?= $image_elements ?>
@@ -77,7 +77,11 @@ $image_element = array_reduce($images,function($r,$o){
 		<div class="card soft dark">
 			<p><?= $product->description ?></p>
 		</div>
-	</div>
 
+		<h2>Recommended Products</h2>
+		<? recommendedSimilar($product->category,$product->id) ?>
+
+	</div>
+	<script src="js/product_thumbs.js"></script>
 </body>
 </html>

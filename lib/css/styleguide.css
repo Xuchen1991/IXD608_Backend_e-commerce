@@ -90,6 +90,12 @@ a:hover {
 	flex-direction: column;
 }
 
+.flex-wrap{
+	flex-wrap: wrap;
+}
+
+
+
 /* SMALL CLASSES */
 
 .media-image {
@@ -180,6 +186,7 @@ a:hover {
 	background-color: black;
 	color: var(--color-white);
 	line-height: var(--header-height);
+	margin-bottom: 1em;
 }
 	.navbar h1 {
 		font-size: 1em;
@@ -188,6 +195,9 @@ a:hover {
 	}
 	.navbar a {
 		padding: 0 0.5em;
+	}
+	.flush>.navbar {
+		margin-bottom: 0;
 	}
 
 /* CARD */
@@ -219,10 +229,14 @@ a:hover {
 	.card.flat {
 		padding: 0;
 	}
-	.card-selection~.card-selection {
-	/*	border-top: 1px solid var(--color-neutral-light);  */
+	[class*='col-']>.card {
+		height: 100%;
+		margin: 0;
 	}
-	.card-selection {
+	.card-section~.card-section {
+		border-top: 1px solid var(--color-neutral-light);
+	}
+	.card-section {
 		padding: 1em;
 	}
 

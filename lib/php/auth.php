@@ -11,6 +11,15 @@ function MYSQLIAuth() {
 	];
 }
 
+function PDOAuth() { // PDO = PHP data object
+	return[
+		"mysql:host=localhost;dbname=ixd608_store_products",
+		"i8201648_wp1",
+		"Kevinxxc1991",
+		[PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8"]
+	];
+}
+
 
 
 ?>

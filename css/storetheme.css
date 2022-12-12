@@ -17,6 +17,10 @@ body {
 	padding-bottom: 4em;
 }
 
+.menu-button label {
+	display: none;
+}
+
 @media(max-width: 810px) {
 .container {
 	padding-left: 1em;
@@ -29,10 +33,24 @@ body {
 
 @media(max-width: 400px) {
 .navbar .display-flex {
+	flex-wrap: wrap;
+}
+.navbar .nav {
+	width: 100%;
+	display: none;
+}
+.navbar .nav-flex ul {
 	display: block;
 }
 .navbar .nav li {
 	line-height: 1.5em;
+}
+.menu-button label {
+	display: block;
+	padding: 0 1em;
+}
+#menu:checked+.navbar .nav {
+	display: block;
 }
 }
 
@@ -45,12 +63,25 @@ body {
 	height: 100%;
 	object-fit: contain;
 }
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+.product.figure:hover {
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.productlist a,
+.product-list a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
 .product-overlay {
 	position: relative;
 	overflow: hidden;
-	border-radius: 1.5em;
+	border-radius: 1em;
 }
-
 .product-overlay figcaption {
 	position: absolute;
 	top: 0;
@@ -156,7 +187,7 @@ body {
 	margin-top: 3em;
 }
 .view-window {
-	border-radius: 1.5em;
+	border-radius: 0em;
 }
 .figure {
 	border-radius: 1.5em;
@@ -191,9 +222,9 @@ body {
 .cart-delete-button a:hover {
 	text-decoration: underline;
 }
-.checkout-button {
+//* .checkout-button {
 	margin-top: 1em;
-}
+} *//
 
 span.badge:not(:empty)::after {
 	content: ')';
@@ -201,8 +232,19 @@ span.badge:not(:empty)::after {
 span.badge:not(:empty)::before {
 	content: '(';
 }
-
-
+.relative {
+	position: relative;
+}
+.checkout-button {
+	position: absolute;
+	bottom: 10px;
+	width: 87%;
+	background-color: black;
+    text-align: center;
+    border-radius: 1em;
+    height: 3em;
+    color: white;
+}
 
 
 
